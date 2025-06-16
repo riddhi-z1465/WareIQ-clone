@@ -1,0 +1,171 @@
+/* Modal Overlay */
+.modal {
+    display: flex; 
+    position: fixed;
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 60vw;
+    position: relative;
+    max-height: 100vh; 
+    overflow-y: auto;
+}
+
+/* Close Button */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.modal-content h2 {
+    color: rgb(49, 91, 124);
+    margin-bottom: 15px;
+    font-size: 34px;
+    font-weight: 300;
+}
+.modal-content h3{
+    font-size: 24px;
+    color: #2d2d2d;
+    font-weight: 500;
+}
+
+.modal-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.modal-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.modal-content ul li {
+    margin-bottom: 5px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 10px); 
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.95em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select {
+    padding: 12px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    font-size: 1em;
+    width: calc(100% - 24px); 
+    box-sizing: border-box; 
+}
+.required-field{
+    color: #ff0000;
+    font-weight: 400;
+}
+.form-group input:focus,
+.form-group select:focus {
+    border-color: black; 
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.phone-input {
+    display: flex;
+    gap: 5px; 
+}
+
+.phone-input .country-code {
+    width: auto; 
+    flex-shrink: 0; 
+}
+
+.captcha-group {
+    flex: 1 1 100%; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.captcha-group input[type="checkbox"] {
+    width: auto;
+    margin-top: 0;
+}
+
+.recaptcha-placeholder {
+    border: 1px solid #ddd;
+    width: 304px; 
+    height: 78px; 
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    color: #777;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+   
+    background-color: #eee;
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 1em;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .form-group {
+        flex: 1 1 100%; /* Stack columns on small screens */
+    }
+}

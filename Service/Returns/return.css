@@ -1,0 +1,375 @@
+
+
+/* Returns QC Section */
+.returns-qc-section {
+     background-color: rgb(3, 77, 131);
+    text-align: center;
+    height: 375px;
+}
+
+/* Returns Hero Top Part */
+.returns-hero-top {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto 80px auto; 
+    padding: 0 20px; 
+    flex-wrap: wrap; 
+    height: 375px;
+}
+
+.returns-hero-content-left {
+    flex: 1; 
+    min-width: 300px; 
+    max-width: 600px; 
+    text-align: left;
+    color: #333; 
+}
+
+.returns-hero-content-left h1 {
+    color: white;
+    font-weight: 600;
+    font-style: normal;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 36px;
+    line-height: 1.3;
+    
+}
+
+.returns-hero-content-left p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+     color: white;
+     font-weight: 300;
+   
+}
+
+.btn-contact-us {
+    font-size: 18px;
+    font-family: 'roboto';
+    font-weight: 100;
+    font-style: normal;
+    background: rgb(70, 193, 212);
+    color: rgb(255, 255, 255);
+    width: auto;
+    padding: 12px 16px;
+    border-radius: 100px;
+    text-decoration: none;
+}
+
+.returns-hero-image-right {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.returns-hero-image-right video {
+    width: 460px;
+    height: 258px;
+    display: block;
+    margin-bottom: 40px;
+    
+}
+
+
+
+
+.Multi-channel-Returns{
+    width: 100vw;
+    height: 466px;
+    background-color: #ffffff;
+}
+.returns-complexity-bottom {
+    background-color: #ffffff; 
+    padding: 60px 40px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100vw;
+}
+
+.returns-complexity-bottom h2 {
+    font-size: 23px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: Roboto;
+    color: rgb(3, 77, 131);
+    text-align: center;
+    margin: 0px;
+}
+
+.returns-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px; 
+    justify-content: center; 
+}
+
+.returns-card {
+    padding: 25px;
+    text-align: left;
+    min-height: 180px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.returns-card h3 {
+    font-size: 1.1em;
+    color: black; 
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.returns-card p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #555;
+    flex-grow: 1; 
+}
+
+
+
+
+
+/* Smart Returns QC Section */
+.smart-returns-section {
+    background-color: rgb(245, 245, 245);
+    padding: 40px 40px;
+    text-align: center;
+    height: 593px;
+}
+
+.smart-returns-section .section-title-returns {
+    font-size: 23px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: Roboto;
+    color: rgb(3, 77, 131);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Smart Returns Grid */
+.smart-returns-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px; 
+    max-width: 1200px; 
+    margin: 0 auto 50px auto;
+    justify-content: center; 
+}
+
+/* Smart Returns Card */
+.smart-returns-card {
+    padding: 25px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    
+}
+
+.smart-returns-card img {
+    max-width: 100%;
+    height: 180px; 
+    object-fit: cover; 
+    margin-bottom: 20px;
+    display: block; 
+}
+
+.smart-returns-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: Roboto;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.smart-returns-card p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #555;
+    flex-grow: 1; 
+}
+
+/* Contact Us Button (for this section) */
+.btn-smart-contact-us {
+    font-size: 18px;
+    font-weight: 100;
+    font-style: normal;
+    background: rgb(3, 77, 131);
+    color: rgb(255, 255, 255);
+    width: auto;
+    padding: 10px 18px;
+    border-radius: 100px;
+    text-decoration: none;
+    margin-bottom: 100px;
+}
+
+
+
+
+
+/* Marketplace Compliance Section */
+.marketplace-compliance-section {
+    background-color: #ffffff; 
+    padding: 50px 200px;
+    text-align: center;
+    
+}
+
+.compliance-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px; 
+    max-width: 1200px;
+    margin: 0 auto; 
+    flex-wrap: wrap; 
+}
+
+/* Compliance Policies Left */
+.compliance-policies-left {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px; 
+    text-align: left;
+    color: #333;
+    font-weight: 300;
+   
+}
+
+.compliance-policies-left h2 {
+    font-size: 23px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: titillium web;
+    color: rgb(3, 77, 131);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.policy-list {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.policy-list li {
+    font-size: 16px;
+    margin-bottom: 15px; 
+    position: relative;
+    padding-left: 25px; 
+    line-height: 1.5;
+}
+
+.policy-list li::before {
+    content: '•'; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5em; 
+    line-height: 1;
+    color: black; 
+    margin-right: 10px;
+}
+
+/* Compliance Diagram Right */
+.compliance-diagram-right {
+    flex: 1; 
+    min-width: 350px; 
+    max-width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.compliance-diagram-right img{
+    width: 460px;
+
+}
+
+
+
+
+
+
+ 
+
+/* Returns QC Section */
+.partner-section {
+    background-image: linear-gradient(0deg, rgb(3, 77, 131) 0%, rgb(70, 193, 212) 100%);
+    width: 100%;
+    height: 368px;
+}
+
+/* Returns Hero Top Part */
+.partner-hero-top {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 80px auto; 
+    padding: 0 20px;
+    flex-wrap: wrap;
+   
+}
+
+.partner-heading {
+    flex: 1;
+    min-width: 300px; 
+    max-width: 600px;
+    text-align: left;
+    color: #333; 
+}
+
+.partner-heading h1 {
+    color: white;
+    font-weight: 600;
+    font-style: normal;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 36px;
+    line-height: 1.3;
+    
+}
+
+
+
+.btn-contact-us {
+    font-size: 18px;
+    font-family: 'roboto';
+    font-weight: 100;
+    font-style: normal;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    padding: 12px 16px;
+    border-radius: 100px;
+    text-decoration: none;
+}
+
+.partner-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-img img {
+    width: 460px;
+    height: 308px;
+    display: block;
+   margin: 20px;
+    
+}

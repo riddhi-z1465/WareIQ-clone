@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart ROI Calculator - WareIQ</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+       
+        padding: 30px;
+        color: #333;
+        transition: background 0.3s ease-in-out;
+      }
+      .container {
+        max-width: 650px;
+        margin: 0 auto;
+        /* background: white; */
+        background: linear-gradient(135deg, #58dae9, #a9eafb);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s;
+      }
+      .container:hover {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+      h1 {
+        text-align: center;
+        color: #0e4ca1;
+        margin-bottom: 25px;
+      }
+      label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #444;
+      }
+      input[type="number"] {
+        width: 100%;
+        padding: 12px;
+        margin-top: 5px;
+        border-radius: 8px;
+        border: 1px solid #bbb;
+        transition: border-color 0.3s ease-in-out;
+      }
+      input[type="number"]:focus {
+        border-color: #0e4ca1;
+        outline: none;
+      }
+      button {
+        margin-top: 25px;
+        padding: 12px 18px;
+        background-color: #0e4ca1;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        width: 100%;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+      }
+      button:hover {
+        background-color: #093c84;
+      }
+      .result,
+      .suggestion {
+        margin-top: 25px;
+        padding: 18px;
+        border-radius: 10px;
+        transition: transform 0.2s ease-in-out;
+      }
+      .result {
+        background: #e7f4ff;
+        border-left: 5px solid #0e4ca1;
+      }
+      .suggestion {
+        background: #fff5d1;
+        border-left: 5px solid #ff9800;
+      }
+      .result:hover,
+      .suggestion:hover {
+        transform: scale(1.02);
+      }
+      .fade-in {
+        animation: fadeIn 0.6s ease-in;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Animated gradient background on body */
+      body {
+        background: linear-gradient(-45deg, #e9f0ff, #ffffff, #f0faff, #ffffff);
+        background-size: 400% 400%;
+        animation: gradientShift 12s ease infinite;
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Input box glow on hover */
+      input[type="number"]:hover {
+        border-color: #007bff;
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+      }
+
+      /* Button pulse animation on hover */
+      button:hover {
+        animation: pulse 0.6s infinite alternate;
+      }
+
+      @keyframes pulse {
+        from {
+          transform: scale(1);
+          box-shadow: 0 0 0 rgba(0, 123, 255, 0.3);
+        }
+        to {
+          transform: scale(1.03);
+          box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+        }
+      }
+
+      /* Icon bounce for emoji visuals in result */
+      .result strong::before,
+      .suggestion strong::before {
+        display: inline-block;
+        margin-right: 6px;
+        animation: bounceEmoji 1.2s infinite;
+      }
+
+      @keyframes bounceEmoji {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-4px);
+        }
+      }
+
+      /* Responsive design tweaks */
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+
+        input[type="number"],
+        button {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📦 Smart ROI Calculator</h1>
+      <label for="monthlyOrders">Monthly Orders</label>
+      <input type="number" id="monthlyOrders" placeholder="e.g. 1000" />
+
+      <label for="orderValue">Average Order Value (₹)</label>
+      <input type="number" id="orderValue" placeholder="e.g. 500" />
+
+      <label for="currentCost">Current Fulfillment Cost/order (₹)</label>
+      <input type="number" id="currentCost" placeholder="e.g. 60" />
+
+      <label for="wareiqCost">WareIQ Estimated Cost/order (₹)</label>
+      <input type="number" id="wareiqCost" placeholder="e.g. 45" />
+
+      <label for="salesGrowth">Expected Sales Growth (%)</label>
+      <input type="number" id="salesGrowth" placeholder="e.g. 10" />
+
+      <label for="returnRate">Return Rate Reduction (%)</label>
+      <input type="number" id="returnRate" placeholder="e.g. 5" />
+
+      <button onclick="calculateROI()">✨ Calculate ROI</button>
+
+      <div class="result fade-in" id="result" style="display: none"></div>
+      <div
+        class="suggestion fade-in"
+        id="suggestion"
+        style="display: none"
+      ></div>
+    </div>
+
+    <script>
+      function calculateROI() {
+        const orders = parseFloat(
+          document.getElementById("monthlyOrders").value
+        );
+        const value = parseFloat(document.getElementById("orderValue").value);
+        const currentCost = parseFloat(
+          document.getElementById("currentCost").value
+        );
+        const wareiqCost = parseFloat(
+          document.getElementById("wareiqCost").value
+        );
+        const growthPercent = parseFloat(
+          document.getElementById("salesGrowth").value
+        );
+        const returnReduction = parseFloat(
+          document.getElementById("returnRate").value
+        );
+
+        if (
+          isNaN(orders) ||
+          isNaN(value) ||
+          isNaN(currentCost) ||
+          isNaN(wareiqCost)
+        ) {
+          alert("🚨 Please fill in all required fields.");
+          return;
+        }
+
+        const currentTotalCost = orders * currentCost;
+        const wareiqTotalCost = orders * wareiqCost;
+        const savings = currentTotalCost - wareiqTotalCost;
+        const extraRevenue = orders * value * (growthPercent / 100);
+        const returnSavings = orders * value * (returnReduction / 100);
+
+        const roi =
+          ((savings + extraRevenue + returnSavings) / wareiqTotalCost) * 100;
+
+        const resultEl = document.getElementById("result");
+        const suggestionEl = document.getElementById("suggestion");
+
+        resultEl.style.display = "block";
+        resultEl.innerHTML = `
+        ✅ <strong>Estimated ROI:</strong> ${roi.toFixed(2)}%<br>
+        💰 <strong>Monthly Savings:</strong> ₹${savings.toLocaleString()}<br>
+        📈 <strong>Extra Revenue from Growth:</strong> ₹${extraRevenue.toLocaleString()}<br>
+        ♻️ <strong>Return Reduction Savings:</strong> ₹${returnSavings.toLocaleString()}<br>
+        📦 <strong>Total Monthly Gain:</strong> ₹${(
+          savings +
+          extraRevenue +
+          returnSavings
+        ).toLocaleString()}
+      `;
+
+        suggestionEl.style.display = "block";
+        suggestionEl.innerHTML = `
+        🔍 <strong>Insight:</strong> Every 1% reduction in return rate boosts ROI significantly.<br>
+        🎯 Tip: Add faster delivery options via WareIQ to reduce return rate and improve customer satisfaction.`;
+      }
+    </script>
+  </body>
+</html>

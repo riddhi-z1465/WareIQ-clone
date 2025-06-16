@@ -1,0 +1,150 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  color: #0f172a;
+  background-color: #ffffff;
+  line-height: 1.5;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+    width: 169px;
+  height: 32px;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  font-size: 1rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #334155;
+  transition: color 0.2s ease-in-out;
+}
+.nav-links a:hover {
+  color: #0f172a;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 3rem;
+  flex-wrap: wrap;
+}
+.hero-content {
+  max-width: 560px;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #f97316;
+  color: #f97316;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  width: 752px;
+}
+.hero-benefits {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: #334155;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.hero-benefits strong {
+  color: #0f172a;
+}
+
+/* Email Form */
+.email-form {
+  display: flex;
+  gap: 1rem;
+  max-width: 480px;
+}
+.email-form input {
+  padding: 15px 20px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    outline: none;
+    border: 1px dashed #222;
+    margin-right: 15px;
+    font-size: 16px;
+}
+.email-form button {
+     min-width: 150px;
+    color: #fff;
+    padding: 15px 30px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 30px;
+    border: 2px solid #625BF7;
+    background: #625BF7;
+    font-size: 16px;
+}
+.email-form button:hover {
+  background-color: #ffffff;
+  color: #625bf7;
+}
+
+/* Hero Image */
+.hero-image img {
+  width: 532px;
+  height: 551px;
+  margin-top: 2rem;
+}
+
+/* Backers */
+.backers {
+  text-align: center;
+  padding: 2rem 0;
+  
+}
+.backers p {
+  font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-align: left;
+    margin-left: 8rem;
+}
+.backer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.backer-logos img {
+  height: 36px;
+}

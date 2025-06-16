@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .waviy {
+        position: relative;
+      }
+      .waviy span {
+        position: relative;
+        display: inline-block;
+        font-size: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        animation: flip 2s infinite;
+        animation-delay: calc(0.2s * var(--i));
+      }
+      @keyframes flip {
+        0%,
+        80% {
+          transform: rotateY(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="waviy">
+      <span style="--i: 1">L</span>
+      <span style="--i: 2">o</span>
+      <span style="--i: 3">a</span>
+      <span style="--i: 4">d</span>
+      <span style="--i: 5">i</span>
+      <span style="--i: 6">n</span>
+      <span style="--i: 7">g</span>
+      <span style="--i: 8">.</span>
+    </div>
+
+    <script>
+      // Wait 6 seconds then redirect
+      setTimeout(() => {
+        window.location.href = "https://virtualwarehousetour.nl.dsv.com/"; // Replace with your target page
+      }, 6000);
+    </script>
+  </body>
+</html>

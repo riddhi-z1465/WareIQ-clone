@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="../style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- pop up form -->
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Interested in knowing more about WareIQ?</h2>
+            <p>WareIQ has helped 400+ top online brands across categories get quick access to:</p>
+            <ul>
+                <li>Pan-India network of fulfillment centers</li>
+                <li>National, regional & hyperlocal shipping partners</li>
+                <li>Team of experts for managing fulfillment operations and customer experience seamlessly</li>
+                <li>Smart tech platform to manage all logistics operations, integrated with all leading D2C,
+                    Marketplaces & B2B channels</li>
+            </ul>
+            <p>Connect with our team to know more!</p>
+            <h3>Contact Us</h3>
+            <form>
+                <div class="form-group">
+                    <label for="firstName">First Name <span class="required-field">*</span></label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name <span class="required-field">*</span></label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <span class="required-field">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required-field">*</span></label>
+                    <div class="phone-input">
+                        <select class="country-code">
+                            <option value="+91">🇮🇳</option>
+                        </select>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="08123456789"
+                            required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="companyName">Company Name <span class="required-field">*</span></label>
+                    <input type="text" id="companyName" name="companyName" required>
+                </div>
+                <div class="form-group">
+                    <label for="enquiryNature">Nature of Enquiry <span class="required-field">*</span></label>
+                    <select id="enquiryNature" name="enquiryNature" required>
+                        <option value="">Select an option</option>
+                        <option value="customer-issues">Customer Issues (Order deliveries, returns etc.)</option> <option value="ecommerce-fulfillment">eCommerce Fulfillment & Shipping Requirement</option>
+                        <option value="career-opportunities">Career Opportunities</option>
+                        <option value="referral-partnership">Referral Partnership & Media Inquiries</option>
+                        <option value="warehousing-service">Looking to Sell Warehousing Service</option>
+                    </select>
+                </div>
+                   
+                </div>
+                <div class="form-group captcha-group">
+                    <input type="checkbox" id="robot" name="robot" required>
+                    <label for="robot">I'm not a robot</label>
+                    <div class="recaptcha-placeholder"></div>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="../script.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>

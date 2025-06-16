@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  
+  
+ 
+  background-repeat: no-repeat;
+  padding: 0;
+}
+
+h1{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 28px;
+    margin: 10px;
+
+}
+img{
+    width: 279px;
+}
+.shipping-container {
+    background: linear-gradient(#46C1D4,#034D83);
+  padding: 50px 20px;
+ 
+   width: 100vw;
+  height: 789px;
+}
+
+.calculator-box {
+  background: white;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.tab-header {
+  font-weight: bold;
+  color: #004080;
+  border-bottom: 3px solid #004080;
+  display: inline-block;
+  padding-bottom: 8px;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.calculator-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.form-left, .form-right {
+  width: 40%;
+}
+
+.form-image {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-image img {
+  width: 120px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.dim-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.dim-inputs input {
+  flex: 1;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background-color: #004080;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #004080;
+  border: 2px solid #004080;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .calculator-form {
+    flex-direction: column;
+  }
+
+  .form-left, .form-right {
+    width: 100%;
+  }
+
+  .form-image {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .form-image img {
+    margin: auto;
+  }
+}

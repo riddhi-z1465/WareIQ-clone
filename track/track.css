@@ -1,0 +1,976 @@
+/* Basic Reset & Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #277bd0; 
+}
+
+/* Navbar Container */
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar-container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo img {
+    height: 35px; 
+    vertical-align: middle;
+}
+
+/* Navigation Links */
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff; 
+}
+
+.nav-links .fas.fa-chevron-down {
+    font-size: 10px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    top: calc(100% + 10px); 
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap; 
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Rotate arrow on hover */
+.dropdown:hover > a .fas.fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Navigation Actions (Buttons) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-login {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.btn-login:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-track {
+    background-color: #007bff; 
+    color: white;
+}
+
+.btn-track:hover {
+    background-color: #0056b3; 
+}
+
+.btn-search {
+    background-color: transparent;
+    color: #666;
+    padding: 10px;
+}
+
+.btn-search:hover {
+    color: #007bff;
+}
+
+.btn-search .fas {
+    font-size: 18px;
+}
+
+
+
+
+
+
+.tracking-hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 446px; 
+    background-image: url(https://wareiq.com/wp-content/themes/wareiq/images/background2.webp);
+    color: #fff;
+    padding: 40px 20px;
+    gap: 50px; 
+    flex-wrap: wrap; 
+}
+
+.content-left {
+    text-align: left;
+    max-width: 450px;
+}
+
+.hero-title {
+    font-size: 2.8em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-description {
+    font-size: 1.1em;
+    font-family: 'Inter', sans-serif; 
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+
+.tracking-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tracking-card {
+    background-color: #fff;
+    border-radius: 1rem;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 362px;
+    height: 246px;
+    max-width: 380px; 
+    box-sizing: border-box;
+}
+
+.track-by-options {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.track-by-label {
+    font-size: 1em;
+    color: #555;
+    margin-right: 20px;
+    font-weight: 600;
+}
+
+/* Custom Radio Buttons */
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 24px; 
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #333;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    
+}
+
+.radio-container label {
+    font-size: 12px;
+    color: rgb(55, 65, 81);
+    
+}
+
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.radio-container:hover input ~ .checkmark {
+    background-color: #ddd;
+}
+
+.radio-container input:checked ~ .checkmark {
+    background-color: #007bff; /* Blue when checked */
+    border-color: #007bff;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.radio-container .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+/* End Custom Radio Buttons */
+
+.input-group {
+    /* margin-bottom: 20px; */
+}
+
+.input-group input[type="text"] {
+       width: 314px;
+       height:42px;
+    padding: 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.input-group input[type="text"]::placeholder {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.input-group input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+#track-btn [type="submit"]{
+    width: 89px;
+    height: 31px;
+    /* padding: 5px 10px; */
+    font-weight: 600;
+    border: 1px solid #000;
+    box-shadow: 0 0 2px #0000003b;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 850px) {
+    .tracking-hero-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .content-left {
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .hero-title {
+        font-size: 2.2em;
+    }
+
+    .hero-description {
+        font-size: 1em;
+    }
+
+    .tracking-card {
+        max-width: 350px;
+        padding: 25px;
+    }
+
+    .track-by-options {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .track-by-label,
+    .radio-container {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-title {
+        font-size: 1.8em;
+    }
+
+    .hero-description {
+        font-size: 0.95em;
+    }
+
+    .tracking-card {
+        padding: 20px;
+    }
+
+    .track-by-options {
+        justify-content: space-around;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .input-group input[type="text"],
+    .track-button {
+        font-size: 0.95em;
+        padding: 10px 12px;
+    }
+}
+
+
+
+
+/* Delight Customers Section */
+.delight-customers-section {
+    background-color: #f8f9fa; 
+    padding: 80px 20px;
+}
+
+.delight-customers-section .container {
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 60px; 
+    margin-bottom: 60px; 
+}
+
+.text-content {
+    flex: 1; 
+    max-width: 45%; 
+    text-align: left;
+}
+
+.text-content h2 {
+    font-size: 38px;
+    color: #0d2c4b; 
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.text-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.image-mockup-wrapper {
+    flex: 1;
+    max-width: 55%; 
+    display: flex;
+    justify-content: center; 
+}
+
+.image-mockup {
+    position: relative;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px; 
+    max-width: 600px; 
+    width: 100%;
+}
+
+.image-mockup img {
+    width: 500px;
+    height: auto;
+    display: block;
+    border-radius: 8px; 
+}
+
+.scroll-indicator {
+    position: absolute;
+    right: -25px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #4dcad7; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 2; 
+}
+
+.scroll-indicator .fas {
+    color: #0d2c4b; 
+    font-size: 20px;
+}
+
+.comparison-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.btn-comparison {
+    background-color: #ffffff;
+    color: #555;
+    border: 1px solid #ddd;
+    padding: 12px 35px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-comparison:hover {
+    background-color: #f1f1f1;
+    border-color: #c9c9c9;
+    color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .content-wrapper {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+        gap: 40px;
+    }
+
+    .text-content,
+    .image-mockup-wrapper {
+        max-width: 100%; /* Take full width when stacked */
+    }
+
+    .text-content {
+        text-align: center;
+    }
+
+    .image-mockup {
+        width: 80%; /* Make mockup a bit smaller on tablets */
+        padding: 15px;
+    }
+
+    .scroll-indicator {
+        right: 0; /* Adjust position for stacked layout */
+        top: calc(50% + 20px); /* Move down slightly to clear mockup */
+    }
+}
+
+@media (max-width: 768px) {
+    .delight-customers-section {
+        padding: 60px 15px;
+    }
+
+    .text-content h2 {
+        font-size: 32px;
+    }
+
+    .text-content p {
+        font-size: 16px;
+    }
+
+    .image-mockup {
+        width: 95%; /* Almost full width on smaller mobiles */
+        padding: 10px;
+    }
+
+    .scroll-indicator {
+        width: 40px;
+        height: 40px;
+        right: -15px; /* Further adjust position */
+        font-size: 18px;
+    }
+
+    .btn-comparison {
+        padding: 10px 25px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-content h2 {
+        font-size: 28px;
+    }
+}
+
+
+
+/* Tracking Features Section */
+.tracking-features-section {
+    background-color: #f8f9fa; 
+    padding: 80px 20px; 
+}
+
+.tracking-features-section .container {
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px; 
+}
+
+.section-header h2 {
+    font-size: 40px;
+    color: #0d2c4b; 
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.section-header h2 span {
+    color: #4dcad7; 
+}
+
+.section-header p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Feature Blocks */
+.feature-block {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 50px; 
+    margin-bottom: 80px; 
+}
+
+.feature-block:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+
+/* Specific styling for left-aligned image feature block */
+.feature-block-left .feature-image {
+    flex: 1;
+    max-width: 50%;
+    text-align: right; 
+}
+
+.feature-block-left .feature-text {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+/* Specific styling for right-aligned image feature block (if you uncomment it later) */
+.feature-block-right {
+    flex-direction: row-reverse; 
+}
+
+.feature-block-right .feature-image {
+    flex: 1;
+    max-width: 50%;
+    text-align: left; 
+}
+
+.feature-block-right .feature-text {
+    flex: 1;
+    max-width: 50%;
+    text-align: right;
+}
+
+.feature-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+    border-radius: 8px; 
+}
+
+.feature-text h3 {
+    color: #00406F;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.feature-text p {
+    color: #000000;
+    font-size: 20px;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .section-header h2 {
+        font-size: 34px;
+    }
+
+    .feature-block {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .feature-block-left .feature-image,
+    .feature-block-left .feature-text,
+    .feature-block-right .feature-image,
+    .feature-block-right .feature-text {
+        max-width: 100%; /* Take full width when stacked */
+        text-align: center; /* Center text when stacked */
+    }
+
+    .feature-image {
+        text-align: center !important; /* Override specific alignments to center image */
+    }
+
+    .feature-image img {
+        max-width: 80%; /* Make images a bit smaller on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .tracking-features-section {
+        padding: 60px 15px;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+    }
+
+    .section-header p {
+        font-size: 16px;
+    }
+
+    .feature-text h3 {
+        font-size: 24px;
+    }
+
+    .feature-text p {
+        font-size: 16px;
+    }
+
+    .feature-block {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header h2 {
+        font-size: 24px;
+    }
+}
+
+
+
+
+/* Hero Section (Blue area below nav) */
+.hero-section {
+    background-image: url(https://wareiq.com/wp-content/themes/wareiq/images/background.webp); 
+    color: white;
+    padding: 100px 20px; 
+    text-align: center;
+    min-height: 300px; 
+}
+/* Hero Section - Modernize Post Purchase Experience */
+.hero-section-modernize {
+    background-image: url(https://wareiq.com/wp-content/themes/wareiq/images/background.webp);
+    color: white;
+    padding: 80px 20px; 
+    overflow: hidden; 
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+.hero-content-wrapper {
+    max-width: 1200px; 
+    margin: 0 auto;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 40px; 
+}
+
+.hero-text-content {
+    flex: 1; 
+    max-width: 50%; 
+    text-align: left;
+}
+
+.hero-text-content h1 {
+    font-size: 48px; 
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-text-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-request-demo {
+    display: inline-block;
+    background-color: #46C1D4; 
+    color: white; 
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none; 
+    cursor: pointer;
+    width: 656px;
+    height: 55px;
+    text-align: center;
+}
+
+.btn-request-demo:hover {
+    background-color: #35aab6; 
+    transform: translateY(-2px); 
+}
+
+.hero-image-content {
+    flex: 1; 
+    max-width: 50%;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+}
+
+.hero-image-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+   
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero-content-wrapper {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+    }
+
+    .hero-text-content,
+    .hero-image-content {
+        max-width: 100%; /* Take full width when stacked */
+        text-align: center;
+    }
+
+    .hero-text-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-image-content {
+        justify-content: center; /* Center image when stacked */
+        margin-top: 40px; /* Space between text and image */
+    }
+
+    .hero-image-content img {
+        max-width: 80%; /* Shrink image a bit on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section-modernize {
+        padding: 60px 15px;
+    }
+
+    .hero-text-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-text-content p {
+        font-size: 16px;
+    }
+
+    .btn-request-demo {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text-content h1 {
+        font-size: 28px;
+    }
+}
+
+/* Blog Section Styling */
+.blog-section {
+    background-color: #f5f5f5; 
+    padding: 60px 20px; 
+    text-align: center; 
+}
+
+.blog-section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-section h2 {
+        color: #164584;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.blog-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60px; 
+    height: 4px;
+    border-radius: 2px;
+}
+
+.blog-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; 
+    justify-content: center;
+}
+
+.blog-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block; 
+}
+
+.blog-content {
+    padding: 20px;
+}
+
+.blog-content h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-section h2 {
+        font-size: 30px;
+    }
+
+    .blog-cards-wrapper {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+
+    .blog-card {
+        max-width: 400px; /* Limit width of stacked cards */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-section {
+        padding: 40px 15px;
+    }
+    .blog-section h2 {
+        font-size: 26px;
+    }
+    .blog-image {
+        height: 180px;
+    }
+    .blog-content h3 {
+        font-size: 16px;
+    }
+}

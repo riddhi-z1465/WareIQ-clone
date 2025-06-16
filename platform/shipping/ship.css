@@ -1,0 +1,289 @@
+/* General Body Styles (ensure this is at the top of your style.css) */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+/* Shipping Section */
+.shipping-section {
+      background: linear-gradient(135deg, #005580 0%, #00a3cc 100%);
+    height: 697px;
+    display: flex;
+    align-items: center;
+    color: #ffffff; 
+    padding: 80px 5%; 
+    justify-content: center;
+    align-items: center;
+    gap: 60px; 
+    min-height: 600px; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+/* Shipping Content Left */
+.shipping-content-left {
+    flex: 1; 
+    max-width: 550px;
+    text-align: left;
+    z-index: 1;
+}
+
+.shipping-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.shipping-logo img {
+    height: 151px; 
+    margin-right: 10px;
+    filter: brightness(0) invert(1); 
+}
+
+
+
+
+.shipping-content-left h1 {
+   font-style: italic;
+    font-size: 25px;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-weight: 300;
+}
+
+.shipping-features {
+    list-style: none; 
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.shipping-features li {
+    font-size: 18px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+    line-height: 1.5;
+}
+
+.shipping-features li::before {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    top: 8px; 
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff; 
+    border-radius: 50%; 
+}
+
+.trusted-by {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.shipping-client-logos {
+    display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.shipping-client-logos img {
+    width: 90%;
+  border-radius: 5px;
+  background: white;
+  padding: 10px;
+}
+
+/* Shipping Graphic Right */
+.shipping-graphic-right {
+    flex: 0 0 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; 
+}
+
+.courier-circle-graphic {
+    width: 450px; 
+    height: 450px;
+    background-color: #e0f2f7; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.courier-logo {
+    position: absolute;
+    max-width: 120px; 
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%); 
+    opacity: 0.8;
+}
+
+.courier {
+    width: 500px;
+    
+}
+
+.shipping-price-text{
+    font-size: 24px;
+    margin-top: 4rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .shipping-section {
+        gap: 40px;
+        padding: 60px 4%;
+    }
+    .shipping-content-left h1 {
+        font-size: 2.5em;
+    }
+    .shipping-graphic-right {
+        flex-basis: 450px;
+        height: 450px;
+    }
+    .courier-circle-graphic {
+        width: 400px;
+        height: 400px;
+    }
+    .courier-logo {
+        max-width: 100px;
+    }
+    .shipping-price-text {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .shipping-section {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+        padding: 50px 5%;
+        min-height: auto;
+    }
+    .shipping-content-left {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    .shipping-logo {
+        justify-content: center; /* Center logo when stacked */
+    }
+    .shipping-content-left h1 {
+        font-size: 2.2em;
+    }
+    .shipping-features {
+        text-align: center;
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 400px; /* Limit width of features list */
+    }
+    .shipping-features li {
+        padding-left: 0; /* Remove padding for centered bullet */
+    }
+    .shipping-features li::before {
+        left: 50%; /* Center the bullet */
+        transform: translateX(-50%) translateY(-100%); /* Adjust to appear above text */
+        top: -5px; /* Fine-tune vertical position */
+    }
+
+    .shipping-client-logos {
+        justify-content: center; /* Center client logos when stacked */
+        max-width: none; /* Allow full width */
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); /* Adjust for smaller screens */
+    }
+    .shipping-graphic-right {
+        flex-basis: auto;
+        height: auto;
+        width: 100%; /* Take full width */
+        margin-top: 40px;
+    }
+    .courier-circle-graphic {
+        width: 350px;
+        height: 350px;
+        margin: 0 auto; /* Center the circle */
+    }
+    .courier-logo {
+        max-width: 80px;
+    }
+    .shipping-price-text {
+        font-size: 1.2em;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .shipping-section {
+        padding: 40px 4%;
+    }
+    .shipping-content-left h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    .shipping-features li {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+    .shipping-client-logos {
+        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    }
+    .shipping-client-logos img {
+        max-width: 70px;
+        padding: 8px;
+    }
+    .courier-circle-graphic {
+        width: 300px;
+        height: 300px;
+    }
+    .courier-logo {
+        max-width: 70px;
+    }
+    .shipping-price-text {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .shipping-logo img {
+        height: 30px;
+    }
+    .shipping-logo span {
+        font-size: 1.5em;
+    }
+    .shipping-content-left h1 {
+        font-size: 1.5em;
+    }
+    .shipping-features li {
+        font-size: 0.9em;
+    }
+    .shipping-client-logos img {
+        max-width: 60px;
+        padding: 5px;
+    }
+    .courier-circle-graphic {
+        width: 250px;
+        height: 250px;
+    }
+    .courier-logo {
+        max-width: 60px;
+    }
+    /* Fine-tune courier logo positions for very small screens if necessary */
+    .delhivery-logo { top: 5%; left: 45%; }
+    .amazon-logistics-logo { top: 10%; right: 10%; }
+    .xpressbees-logo { top: 35%; left: 5%; }
+    .blue-dart-logo { top: 40%; right: 0%; } /* Pushed further right */
+    .ekart-logo { bottom: 10%; left: 15%; }
+    .ecom-express-logo { bottom: 5%; right: 30%; }
+}

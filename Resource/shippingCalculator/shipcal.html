@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WareIQ Shipping Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="shipcal.css">
+</head>
+<body>
+
+ 
+    <section class="shipping-container" >
+        <img src="https://wareiq.com/wp-content/uploads/2025/03/2194e7ff43071bf20f5fe8c085ce8eb4-1.png" alt="">
+        <h1>WareIQ Shipping Calculator</h1>
+    <div class="calculator-box">
+      <div class="tab-header">Domestic</div>
+
+      <form class="calculator-form">
+        <div class="form-left">
+          <div class="form-group">
+            <label>Pick-up Area Pincode*</label>
+            <input type="text" placeholder="Enter 6 digit Pickup Area Pincode">
+          </div>
+
+          <div class="form-group">
+            <label>Delivery Area Pincode*</label>
+            <input type="text" placeholder="Enter 6 digit Delivery Area Pincode">
+          </div>
+
+          <div class="form-group">
+            <label>Weight (in KG)*</label>
+            <input type="number" placeholder="0.5">
+          </div>
+
+          <div class="form-buttons">
+            <button type="submit" class="btn-primary">Calculate</button>
+            <button type="reset" class="btn-secondary">Reset</button>
+          </div>
+        </div>
+
+        <div class="form-right">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Dimensions (in CM)</label>
+              <div class="dim-inputs">
+                <input type="number" placeholder="L">
+                <input type="number" placeholder="W">
+                <input type="number" placeholder="H">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Payment Mode*</label>
+              <div class="radio-group">
+                <label><input type="radio" name="payment" value="Prepaid"> Prepaid</label>
+                <label><input type="radio" name="payment" value="COD" checked> Cash on Delivery</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Shipment Value (Rs.)*</label>
+              <input type="number" placeholder="100">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-image">
+          <img src="https://wareiq.com/wp-content/uploads/2025/02/Image-1.png" alt="Calculator Image">
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script src="shipcal.js"></script>
+</body>
+</html>

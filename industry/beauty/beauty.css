@@ -1,0 +1,500 @@
+
+
+
+
+
+/* Beauty Fulfillment Section */
+.beauty-fulfillment-section {
+    background-image: url('/image/beauty-sec.png'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    position: relative; 
+    padding: 100px 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 630px; 
+}
+
+
+.beauty-fulfillment-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+}
+
+
+.beauty-content {
+    position: relative; 
+    z-index: 2;
+    color: #ffffff; 
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+.beauty-content h1 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+.beauty-content p {
+    font-size: 18px; 
+    margin-bottom: 40px;
+    line-height: 1.6;
+    
+}
+
+/* Get Started Button */
+.btn-get-started {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 16px;
+    border: none;
+    background: #46C1D4;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    outline: none ;
+    transition: 0.25s ease all;
+    text-decoration: none ;
+}
+
+.btn-get-started:hover {
+    color: #0056b3;
+    background-color: white;
+    transform: translateY(-2px); 
+}
+
+
+
+
+
+
+
+
+/* Challenges Section */
+.challenges-section {
+    background-color: #034d83; 
+    color: #ffffff; 
+    padding: 80px 20px;
+    text-align: center;
+    height: 600px;
+    line-height: 1;
+}
+
+.challenges-section h2 {
+    font-size: 38px;
+    margin-bottom: 60px;
+    font-weight: 500;
+    font-family: titillium web;
+}
+
+/* Challenges Grid */
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px; 
+    max-width: 1300px; 
+    margin: 0 auto; 
+    justify-content: center; 
+}
+
+/* Challenge Card */
+.challenge-card {
+    
+    color: #333; 
+    padding: 40px;
+    text-align: center;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 209px;
+    height: 299px;
+   
+}
+
+/* Challenge Number */
+.challenge-number {
+    background-color: #F7F7F7; 
+    width: 55px;
+    height: 55px;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; 
+    flex-shrink: 0; 
+    margin-right: 90px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #034d83;
+   
+}
+
+/* Challenge Description */
+.challenge-card p {
+    font-size: 18px;
+    color: #4E4E4E;
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: left;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .challenges-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .challenges-section h2 {
+        font-size: 2.5em;
+        margin-bottom: 50px;
+    }
+    .challenges-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Might show 3 columns */
+        gap: 20px;
+    }
+    .challenge-card {
+        padding: 25px;
+        min-height: 220px;
+    }
+    .challenge-number {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1em;
+        margin-bottom: 15px;
+    }
+    .challenge-card p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .challenges-section {
+        padding: 60px 15px;
+    }
+    .challenges-section h2 {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+    .challenges-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically on small screens */
+        max-width: 400px; /* Limit width of stacked cards */
+        gap: 20px;
+    }
+    .challenge-card {
+        padding: 20px;
+        min-height: unset; /* Allow height to adjust naturally */
+    }
+    .challenge-number {
+        width: 32px;
+        height: 32px;
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+    .challenge-card p {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .challenges-section {
+        padding: 40px 10px;
+    }
+    .challenges-section h2 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+
+/* Beauty Solution Section */
+.beauty-solution-section {
+    background: #EFF3F4;
+    padding: 80px 5%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; 
+    flex-wrap: wrap; 
+    height: 737px;
+}
+
+/* Solution Image Container */
+.solution-image-container {
+    flex: 1; 
+    min-width: 300px; 
+    max-width: 550px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+   
+}
+
+.solution-image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block; 
+    border-radius: 10px; 
+}
+
+/* Solution Content Right */
+.solution-content-right {
+    flex: 1; 
+    min-width: 300px; 
+    max-width: 600px; 
+    text-align: left;
+    color: rgb(3, 77, 131);
+}
+
+.solution-content-right h2 {
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 30px;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.solution-features {
+    list-style: none; 
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.solution-features li {
+    position: relative;
+    margin: 20px 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+    color: #5A5A5A;
+}
+
+.solution-features li::before {
+    content: '+'; 
+    position: absolute;
+    left: 0;
+    top: 5px; 
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #46C1D4; 
+}
+
+/* Fulfillment Expert Button */
+.btn-fulfillment-expert {
+   display: inline-block;
+    padding: 15px 25px;
+    font-size: 16px;
+    border: none;
+    background: #46C1D4;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    outline: none !important;
+    transition: 0.25s ease all;
+    text-decoration: none !important;
+}
+
+.btn-fulfillment-expert:hover {
+    background-color: #034d83; 
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .beauty-solution-section {
+        flex-direction: column; 
+        padding: 60px 4%;
+        gap: 40px;
+    }
+    .solution-image-container,
+    .solution-content-right {
+        max-width: 100%; 
+        min-width: unset;
+    }
+    .solution-image-container {
+        padding: 15px; 
+    }
+    .solution-content-right {
+        text-align: center; 
+    }
+    .solution-content-right h2 {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+    .solution-features {
+        max-width: 500px; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+    .solution-features li {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+    .solution-features li::before {
+        left: 50%; 
+        transform: translateX(-50%) translateY(-150%); 
+        top: -8px; 
+    }
+    .btn-fulfillment-expert {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .beauty-solution-section {
+        padding: 50px 3%;
+        gap: 30px;
+    }
+    .solution-image-container {
+        padding: 10px;
+    }
+    .solution-content-right h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    .solution-features li {
+        font-size: 0.95em;
+        margin-bottom: 12px;
+    }
+    .solution-features li::before {
+        font-size: 1em;
+        top: -5px; /* Adjust as needed */
+    }
+    .btn-fulfillment-expert {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .solution-content-right h2 {
+        font-size: 1.5em;
+    }
+    .solution-features li {
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-in from Left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide-in from Right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation Utility Classes */
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+.animate-slideInLeft {
+  animation: slideInLeft 1s ease forwards;
+}
+.animate-slideInRight {
+  animation: slideInRight 1s ease forwards;
+}
+.animate-delay-1 {
+  animation-delay: 0.2s;
+}
+.animate-delay-2 {
+  animation-delay: 0.4s;
+}
+.animate-delay-3 {
+  animation-delay: 0.6s;
+}
+.animate-delay-4 {
+  animation-delay: 0.8s;
+}
+.animate-delay-5 {
+  animation-delay: 1.0s;
+}
+
+/* On hover grow and shadow */
+.interactive-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button hover enhancement */
+.btn-get-started:hover, .btn-fulfillment-expert:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth Load */
+section, .challenge-card, .solution-content-right, .solution-image-container {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}

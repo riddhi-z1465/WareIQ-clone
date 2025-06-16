@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Virtual Warehouse Experience</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #fff;
+      overflow-x: hidden;
+      background: #000;
+    }
+
+    section {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      transition: background 1s ease;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .section-content {
+      max-width: 900px;
+      opacity: 0;
+      transform: translateY(60px) scale(0.95);
+      transition: all 1s ease-out;
+    }
+
+    .visible .section-content {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 12px 28px;
+      background-color: #fff;
+      color: #034d83;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+      display: inline-block;
+      border: 1px solid black;
+    }
+
+    .btn:hover {
+      background-color: #006a9c;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* Backgrounds (Parallax-like style) */
+    .bg-1 { 
+      background-image: url('https://www.elementlogic.net/content/uploads/sites/8/2024/10/boxes-on-shelves-warehouse-storage.jpg');
+     
+   }
+
+    .bg-2 { background-image: linear-gradient(135deg, #012a4a, #013a63); }
+    .bg-3 { background-image: linear-gradient(135deg, #023e8a, #0077b6); }
+    .bg-4 { background-image: linear-gradient(135deg, #014f86, #0096c7); }
+    .bg-5 { background-image: linear-gradient(135deg, #0077b6, #48cae4); }
+    .bg-6 { background-image: linear-gradient(135deg, #90e0ef, #caf0f8); color: #000; }
+
+    @media (max-width: 768px) {
+      h2 { font-size: 1.8rem; }
+      p { font-size: 1rem; }
+    }
+
+    .vw-img img{
+      width: 600px;
+      border-radius: 10px;
+      transition: 0.8s;
+    }
+
+    .vw-img img:hover{
+      transform: scale(1.01);
+      
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section 1 -->
+  <section class="bg-1" >
+    <div class="section-content" >
+      <h2 style="text-shadow: 2px 2px 2px black;">Welcome to the Virtual Warehouse</h2>
+      <p style="text-shadow: 2px 2px 2px black;">Get a firsthand look at WareIQ’s smart warehouse ecosystem powered by AI, IoT, and real-time dashboards.</p>
+      <a href="Loading.html" class="btn">Start Exploring</a>
+    </div>
+    <!-- https://virtualwarehousetour.nl.dsv.com/ -->
+  </section>
+
+
+  <!-- Section 2 -->
+  <section class="bg-2" style="display: flex;justify-content: center;align-items: center; gap: 30px;">
+    <div class="section-content" style="text-align: left; padding-left: 4rem;">
+      <h2>Virtual Warehouse Experience</h2>
+      <p>Step into the future of logistics with our Virtual Warehouse — a 360° interactive platform that brings our fulfillment centers to your screen. Explore how products move from storage to shipment, understand our automation systems, and get a close look at the technology driving seamless order fulfillment.</p>
+    </div>
+    <div class="vw-img"><img src="https://cms.ar-racking.com/uploads/2020/06/2023-3.jpg"  alt=""></div>
+  </section>
+
+  <!-- Section 3 -->
+  <section class="bg-3" style="display: flex;justify-content: center;align-items: center; gap: 30px;" >
+    <div class="vw-img"><img src="https://www.bcds.com.au/wp-content/uploads/2023/05/NA_SEP._29.jpg"  alt=""></div>
+    <div class="section-content">
+      <h2>Track Inventory in Real-Time</h2>
+      <p>Gain full control and visibility over your inventory with our real-time tracking system. From the moment your stock enters our fulfillment center to the second it leaves for delivery, every movement is recorded and updated instantly on your dashboard.</p><br> <br>
+      <p style="text-align: left;">With real-time inventory tracking, you can: <br>
+
+&#8226; Monitor stock levels live across all warehouse locations <br>
+
+&#8226; Avoid stockouts and overselling with automated inventory alerts <br>
+
+&#8226; Track SKU performance and identify fast-moving or dead stock <br>
+
+ &#8226; Enable smart replenishment through predictive analytics <br>
+
+&#8226; Integrate seamlessly with your eCommerce platforms (Amazon, Shopify, Flipkart, etc.)</p>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
+  <section class="bg-4" style="display: flex;justify-content: center;align-items: center; gap: 30px;">
+    <div class="section-content">
+      <h2>AI-Based Storage Zones</h2>
+      <p>Optimize space and speed with intelligent storage powered by AI. Our system automatically places products in the most efficient zones based on demand, size, and picking frequency — ensuring faster fulfillment, fewer errors, and smarter warehouse operations.</p>
+    </div>
+     <div class="vw-img"><img src="https://i.pinimg.com/736x/16/b4/36/16b436e3702ffcb459c2fcb598f2f7e9.jpg"  alt=""></div>
+  </section>
+
+  <!-- Section 5 -->
+  <section class="bg-5" style="display: flex;justify-content: center;align-items: center; gap: 30px;">
+    <div class="vw-img"><img src="https://www.mintsoft.com/media/ziflx030/gettyimages-957787002.jpg?width=350&v=1db35c13b63fb50"  alt=""></div>
+    <div class="section-content">
+      <h2>Order Fulfillment in Motion</h2>
+      <p>Experience seamless, end-to-end order processing — from inbound to last-mile. Our real-time system tracks every step: picking, packing, quality check, and dispatch — all in motion, all visible, all optimized for speed and accuracy.</p>
+    </div>
+  </section>
+
+  <!-- Section 6 -->
+  <section class="bg-6" style="display: flex;justify-content: center;align-items: center; gap: 30px;">
+    <div class="section-content">
+      <h2>Customization & Kitting</h2>
+      <p>View how we create personalized orders and pre-built kits tailored to your brand’s unique needs.</p>
+    </div>
+    <div class="vw-img"><img src="https://www.ecommerce-express.com/wp-content/uploads/2024/04/Custom-Kitting-Services-in-China.png"  alt=""></div>
+  </section>
+
+  <!-- Section 7 -->
+  <section class="bg-7" style="background-color: #e1f4fd;color: #000;">
+    <div class="section-content" >
+      <h2>Data-Driven Decisions Using Smart ROI Calculator</h2>
+      <p>Take control of your logistics strategy with real insights — not assumptions. Our Smart ROI Calculator empowers you to make confident, data-backed decisions by analyzing your business inputs in real-time.</p><br>
+      <h3 style="text-align: left;">Simply enter your monthly order volume, service zones, and current logistics costs. The calculator instantly:</h3>
+      <ul style="text-align: left;">
+        <li>Estimates your ROI with WareIQ’s fulfillment model</li>
+        <li>Recommends optimal warehouse locations</li>
+        <li>Suggests the best-fit value-added services</li>
+        <li>Highlights cost-saving opportunities across storage, shipping, and manpower</li>
+      </ul>
+      <a href="smartROIcalculator.html" class="btn">Get a Demo</a>
+    </div>
+  </section>
+
+  <!-- JS for Scroll Reveal -->
+  <script>
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(sec => observer.observe(sec));
+
+    // Optional: Parallax-like effect on scroll
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      sections.forEach((sec, idx) => {
+        sec.style.backgroundPositionY = -(scrolled * 0.2) + 'px';
+      });
+    });
+
+
+
+    
+ 
+  </script>
+
+</body>
+</html>
