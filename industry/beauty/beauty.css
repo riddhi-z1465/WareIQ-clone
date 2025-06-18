@@ -5,7 +5,7 @@
 
 /* Beauty Fulfillment Section */
 .beauty-fulfillment-section {
-    background-image: url('/image/beauty-sec.png'); 
+    background-image: url('../../image/beauty-sec.png'); 
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat; 
