@@ -922,7 +922,7 @@ position: fixed;
 .main-hero {
   display: flex;
   flex-wrap: wrap;
-  background-image: url(../image/herobg.png);
+  background-image: url(image/herobg.png);
   padding: 40px 24px;
   justify-content: center;
   align-items: center;

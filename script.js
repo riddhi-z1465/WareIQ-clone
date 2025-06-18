@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // --- Top Banner Close Functionality ---
+    // --- modal Close Functionality ---
     const bannerCloseButton = document.querySelector('.banner-close');
     if (bannerCloseButton) {
         bannerCloseButton.addEventListener('click', () => {
@@ -84,6 +84,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+
+// top banner
+const topBanner = document.querySelector('.top-banner');
+  const bannerCloseButton = document.querySelector('.banner-close');
+  const navbar = document.querySelector('.navbar');
+  let navbarOffset = navbar.offsetTop;
+
+  function updateStickyNavbar() {
+    const scrollTop = window.scrollY;
+    if (scrollTop >= navbarOffset) {
+      navbar.classList.add('sticky');
+    } else {
+      navbar.classList.remove('sticky');
+    }
+  }
+
+  if (bannerCloseButton) {
+    bannerCloseButton.addEventListener('click', () => {
+      if (topBanner) {
+        topBanner.style.display = 'none';
+        navbarOffset = navbar.offsetTop;
+        updateStickyNavbar();
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateStickyNavbar);
+
+
+
+  
 
 document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.getElementById('mainNavbar');
@@ -524,17 +557,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const mainNavbar = document.getElementById('mainNavbar');
-    const stickyOffset = mainNavbar.offsetTop; // Get the initial top offset of the navbar
-
-    function updateStickyNavbar() {
-        if (window.scrollY > stickyOffset) {
-            mainNavbar.classList.add('navbar-sticky');
-        } else {
-            mainNavbar.classList.remove('navbar-sticky');
-        }
-    }
-
+   
     // Call the function on scroll and on page load
     window.addEventListener('scroll', updateStickyNavbar);
     updateStickyNavbar(); // Initial check in case the page is loaded scrolled down
@@ -564,14 +587,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Close dropdowns if clicking anywhere outside the navbar
-    document.addEventListener('click', function(event) {
-        if (!mainNavbar.contains(event.target)) {
-            document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                menu.style.display = 'none';
-            });
-        }
-    });
+    
+   
 
     // --- Search Bar functionality (existing) ---
     const searchIconWrapper = document.querySelector('.search-icon-wrapper');
